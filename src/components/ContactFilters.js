@@ -32,7 +32,7 @@ const ContactFilters = ({ onSearch }) => {
     }}} >
     <div class="firstLine">
         <div class="firstName">
-        <label for="firstName">First Name</label>
+        <label>First Name</label>
         <input
             type="text"
             name="firstName"
@@ -41,7 +41,7 @@ const ContactFilters = ({ onSearch }) => {
         />
         </div>
         <div class="lastName">
-        <label for="lastName">Last Name</label>
+        <label>Last Name</label>
         <input
             type="text"
             name="lastName"
@@ -50,7 +50,7 @@ const ContactFilters = ({ onSearch }) => {
         />
         </div>
         <div class="dob">
-        <label for="dob">Date of birth</label>
+        <label>Date of birth</label>
         <input
             type="date"
             name="dob"
@@ -59,7 +59,7 @@ const ContactFilters = ({ onSearch }) => {
         />
         </div>
         <div class="streetAddress">
-        <label for="streeAddress">Street address</label>
+        <label>Street address</label>
         <input
             type="text"
             name="streeAddress"
@@ -70,7 +70,7 @@ const ContactFilters = ({ onSearch }) => {
     </div>
     <div class="secondLine">
         <div class="email">
-        <label for="email">Email address</label>
+        <label>Email address</label>
         <input
             type="email"
             name="email"
@@ -79,7 +79,7 @@ const ContactFilters = ({ onSearch }) => {
         /> 
         </div>
         <div class="phone">
-        <label for="phone">Phone number</label>
+        <label>Phone number</label>
         <input
             type="text"
             name="phone"
@@ -89,7 +89,7 @@ const ContactFilters = ({ onSearch }) => {
         </div>
         
         <div class="city">
-        <label for="city">City</label>
+        <label>City</label>
         <input
             type="text"
             name="city"
@@ -98,7 +98,7 @@ const ContactFilters = ({ onSearch }) => {
         />
         </div>
         <div class="state">
-        <label for="state">State</label>
+        <label>State</label>
         <select
             type="select"
             id="state"
@@ -112,7 +112,7 @@ const ContactFilters = ({ onSearch }) => {
         </select>
         </div>
         <div class="zipCode">
-        <label for="zipCode">Zip code</label>
+        <label>Zip code</label>
         <input
             type="text"
             name="zipCode"
