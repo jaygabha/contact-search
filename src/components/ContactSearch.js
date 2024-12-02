@@ -12,7 +12,6 @@ const ContactSearch = () => {
 
   const handleSearch = (filters) => {
     const results = contacts.filter((contact) => {
-        console.log(filters)
         return (
             (!filters.firstName || contact.firstName.toLowerCase().includes(filters.firstName.toLowerCase())) &&
             (!filters.lastName || contact.lastName.toLowerCase().includes(filters.lastName.toLowerCase())) &&
