@@ -35,7 +35,13 @@ const ContactTable = ({ contacts, onSelectContact }) => {
           {contacts.slice(offset, offset + contactsPerPage).map((contact) => (
             <tr key={contact.id}>
               <td>
-                <input type="checkbox" class="contact-checkbox" onChange={() => onSelectContact(contact)} />
+                <input type="checkbox" class="contact-checkbox" onChange={(e) => {
+                    document.querySelectorAll(".contact-checkbox").forEach(checkbox => {
+                        checkbox.checked = false
+                    })
+                    e.target.checked = true
+                    onSelectContact(contact)
+                }} />
               </td>
               <td>{contact.firstName + " " + contact.lastName}</td>
               <td>{contact.dob}</td>

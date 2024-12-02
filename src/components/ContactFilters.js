@@ -30,7 +30,7 @@ const ContactFilters = ({ onSearch }) => {
         if(event.code==="Enter"){
         onSearch(filters)
     }}} >
-    <div className="firstLine">
+    <div class="firstLine">
         <div class="firstName">
         <label for="firstName">First Name</label>
         <input
