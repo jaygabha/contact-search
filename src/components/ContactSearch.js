@@ -30,7 +30,7 @@ const ContactSearch = () => {
 
   return (
     <div>
-      <h1>Search for a Contact</h1>
+      <h1 class="searchHeader">Search for a Contact</h1>
       <ContactFilters onSearch={handleSearch} />
       <ContactTable
         contacts={filteredContacts}

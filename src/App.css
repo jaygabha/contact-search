@@ -18,14 +18,14 @@ h1 {
   margin: 0;
 }
 
+h1.searchHeader {
+  margin-bottom: 2%;
+}
+
 main {
   max-width: 1200px;
   margin: 20px auto;
   padding: 20px;
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 label {
@@ -89,8 +89,8 @@ table th {
   font-weight: bold;
 }
 
-table tr:hover {
-  background-color: #f9f9f9;
+tbody tr:hover {
+  background-color: #ccc9c9;
 }
 
 .pagination {
@@ -136,11 +136,122 @@ table tr:hover {
   text-align: center;
 }
 
-.filters{
-  display: grid 50%;
+.filter-container {
+  display: block;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.firstLine, .secondLine, .submit{
+  display: inline-flex;
+  margin-bottom: 20px;
+  width: 100%;
 
 }
 
-table tr:hover {
-  background-color: #f9f9f9;
+.firstName, .lastName, .dob, .email, .phone{
+  width: 15%;
+  margin-right: 2%;
+}
+
+.streetAddress{
+  margin-left: 5%;
+  width: 44%;
+}
+
+.city {
+  margin-left: 22%;
+  width: 20%;
+}
+
+.state, .zipCode{
+  margin-left: 2%;
+  width: 10%;
+}
+
+.filter-container input,
+.filter-container select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+.filter-container label {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.filter-container input[type="date"] {
+  padding: 6px;
+}
+
+.filter-container button {
+  padding: 10px 16px;
+  color: #007bff;
+  background-color: white;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  border: 2px solid #ccc;
+}
+
+
+.filter-container button:hover {
+  background-color: #ccc9c9;
+}
+
+
+.pagination {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.pagination li {
+  display: inline-block;
+  margin: 0 5px;
+
+}
+
+.pagination li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination li a:hover {
+  background-color: #f0f0f0;
+}
+
+.pagination li.active a {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
+}
+
+.pagination li.previous a,
+.pagination li.next a {
+  color: #615f5f;
+  border: none;
+  font-size: x-large;
+}
+
+.pagination li.previous a:hover,
+.pagination li.next a:hover {
+  background-color: #bebebe;
 }

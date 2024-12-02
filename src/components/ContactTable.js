@@ -50,12 +50,13 @@ const ContactTable = ({ contacts, onSelectContact }) => {
         </tbody>
       </table>
       <ReactPaginate
-        previousLabel={"← Previous"}
-        nextLabel={"Next →"}
+        previousLabel={"<"}
+        nextLabel={">"}
         pageCount={pageCount}
         onPageChange={handlePageClick}
         containerClassName={"pagination"}
         activeClassName={"active"}
+        pageRangeDisplayed={1}          
       />
     </div>
   );
