@@ -12,18 +12,25 @@ const ContactSearch = () => {
 
   const handleSearch = (filters) => {
     const results = contacts.filter((contact) => {
-      return Object.keys(filters).every((key) =>
-        filters[key]
-          ? contact[key].toString().toLowerCase().includes(filters[key].toLowerCase())
-          : true
-      );
+        console.log(filters)
+        return (
+            (!filters.firstName || contact.firstName.toLowerCase().includes(filters.firstName.toLowerCase())) &&
+            (!filters.lastName || contact.lastName.toLowerCase().includes(filters.lastName.toLowerCase())) &&
+            (!filters.dob || contact.dob === filters.dob) &&
+            (!filters.address || contact.address.toLowerCase().includes(filters.address.toLowerCase())) &&
+            (!filters.city || contact.city.toLowerCase().includes(filters.city.toLowerCase())) &&
+            (!filters.state || contact.state.toLowerCase() === filters.state.toLowerCase()) &&
+            (!filters.zip || contact.zip.includes(filters.zip)) &&
+            (!filters.email || contact.email.toLowerCase().includes(filters.email.toLowerCase())) &&
+            (!filters.phone || contact.phone.includes(filters.phone))
+          );
     });
     setFilteredContacts(results);
   };
 
   return (
     <div>
-      <h1>Contact Search</h1>
+      <h1>Search for a Contact</h1>
       <ContactFilters onSearch={handleSearch} />
       <ContactTable
         contacts={filteredContacts}

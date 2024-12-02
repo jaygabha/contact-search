@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import contacts from "./contacts.json";
 
 const uniqueStates = [...new Set(contacts.map(contact => contact.state))];
-console.log(uniqueStates)
 
 const ContactFilters = ({ onSearch }) => {
   const [filters, setFilters] = useState({
@@ -28,51 +27,55 @@ const ContactFilters = ({ onSearch }) => {
 
   return (
     <div>
+      <div className="filters">
+      <label for="firstName">First Name</label>
       <input
         type="text"
         name="firstName"
-        placeholder="First Name"
         value={filters.firstName}
         onChange={handleChange}
       />
+      <label for="lastName">Last Name</label>
       <input
         type="text"
         name="lastName"
-        placeholder="Last Name"
         value={filters.lastName}
         onChange={handleChange}
       />
+      <label for="dob">Date of birth</label>
       <input
         type="date"
         name="dob"
         value={filters.dob}
         onChange={handleChange}
       />
+      <label for="email">Email address</label>
       <input
         type="email"
         name="email"
-        placeholder="Email Address"
         value={filters.email}
         onChange={handleChange}
-      />
+      /> 
+      <label for="phone">Phone number</label>
       <input
         type="text"
         name="phone"
-        placeholder="Phone Number"
         value={filters.phone}
         onChange={handleChange}
       />
+      </div>
+      <div className="filters">
+      <label for="streeAddress">Street address</label>
       <input
         type="text"
         name="streeAddress"
-        placeholder="Street address"
         value={filters.streeAddress}
         onChange={handleChange}
       />
+      <label for="city">City</label>
       <input
         type="text"
         name="city"
-        placeholder="City"
         value={filters.city}
         onChange={handleChange}
       />
@@ -81,7 +84,6 @@ const ContactFilters = ({ onSearch }) => {
         type="select"
         id="state"
         name="state"
-        placeholder="State"
         value={filters.state}
         onChange={handleChange}
         defaultValue="None"
@@ -89,15 +91,15 @@ const ContactFilters = ({ onSearch }) => {
         <option key="None" value="">None</option>
         {uniqueStates.map((state) => <option key={state} value={state}>{state}</option>)}
       </select>
-
+      <label for="zipCode">Zip code</label>
       <input
         type="text"
         name="zipCode"
-        placeholder="Zip Code"
         value={filters.zipCode}
         onChange={handleChange}
       />
       <button onClick={handleSearch}>Search</button>
+      </div>
     </div>
   );
 };
